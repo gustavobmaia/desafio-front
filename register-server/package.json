@@ -1,0 +1,21 @@
+{
+  "name": "register-service",
+  "description": "Local server to Desafio-Front",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.1462.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "serverless-offline": "^12.0.4"
+  },
+  "scripts": {
+    "create-table": "./create-table.sh",
+    "offline": "IS_OFFLINE=true sls offline",
+    "start": "npx nodemon --exec npm run offline && --exec npm run create-table"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
